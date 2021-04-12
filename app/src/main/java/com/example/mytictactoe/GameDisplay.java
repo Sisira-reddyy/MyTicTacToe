@@ -95,6 +95,6 @@ public class GameDisplay extends AppCompatActivity {
         gridLayout = findViewById(R.id.gridLayout);
         resultText = findViewById(R.id.winnerMssg);
         tv1 = findViewById(R.id.textView7);
-        tv1.animate().alpha(0f).setDuration(2000);
+        tv1.animate().alpha(0f).setDuration(4000);
     }
 }
