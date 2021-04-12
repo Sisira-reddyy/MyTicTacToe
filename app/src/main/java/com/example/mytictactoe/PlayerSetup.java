@@ -9,8 +9,10 @@ import android.widget.EditText;
 
 public class PlayerSetup extends AppCompatActivity {
 
-    private EditText player1;
-    private EditText player2;
+    public EditText player1;
+    public EditText player2;
+    static String editTextTextPersonName;
+    static String editTextTextPersonName2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +24,12 @@ public class PlayerSetup extends AppCompatActivity {
     }
 
     public void submitButtonClick(View view) {
-        String editTextTextPersonName = player1.getText().toString();
-        String editTextTextPersonName2 = player2.getText().toString();
+        editTextTextPersonName = player1.getText().toString();
+        editTextTextPersonName2 = player2.getText().toString();
+        String[] array1 = {editTextTextPersonName, editTextTextPersonName2};
 
-        Intent intent = new Intent (this, GameDisplay.class);
-        intent.putExtra( "PLAYER_NAMES", new String[] {editTextTextPersonName, editTextTextPersonName2});
+        Intent intent = new Intent (PlayerSetup.this, GameDisplay.class);
+        intent.putExtra( "PLAYER_NAMES", array1);
         startActivity(intent);
 
     }

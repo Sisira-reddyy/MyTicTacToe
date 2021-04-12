@@ -12,4 +12,5 @@
 
     <string name="playAgainButton">Play Again</string>
     <string name="homeButton">Home</string>
+    <string name="todo">TODO</string>
 </resources>
